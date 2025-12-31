@@ -1,14 +1,3 @@
-#' TG Therapeutics Corporate Color Palettes
-#'
-#' @description
-#' Functions for working with TG Therapeutics corporate color palettes
-#' in ggplot2 visualizations.
-#'
-#' @name ChrisFlow-package
-#' @aliases ChrisFlow
-#' @keywords internal
-"_PACKAGE"
-
 #' Extract TG Corporate Colors as Hex Codes
 #'
 #' @description
