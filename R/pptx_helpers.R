@@ -18,7 +18,7 @@
 #' library(ggplot2)
 #'
 #' p <- ggplot(mtcars, aes(x = mpg, y = hp)) +
-#'   geom_point()
+#'     geom_point()
 #'
 #' rvg_plot <- convert_to_rvg(p)
 #' }
@@ -76,7 +76,7 @@ convert_to_rvg <- function(plot, bg = "NA", fonts = list(sans = "Arial"), editab
 #'
 #' # Create plot and convert to rvg
 #' p <- ggplot(mtcars, aes(x = mpg, y = hp)) +
-#'   geom_point()
+#'     geom_point()
 #' rvg_plot <- convert_to_rvg(p)
 #'
 #' # Add to presentation
@@ -101,7 +101,6 @@ add_to_pptx <- function(pptx,
                         title_color = "#003494",
                         title_size = 36,
                         title_family = "Arial") {
-
     # Determine slide layout based on title_lines argument
     if (title_lines == "one") {
         pptx <- officer::add_slide(pptx,
@@ -191,7 +190,6 @@ add_title_slide <- function(pptx,
                             title_size = 36,
                             subtitle_size = 24,
                             title_family = "Arial") {
-
     # Add slide with Title Slide layout
     pptx <- officer::add_slide(
         pptx,
@@ -250,7 +248,7 @@ init_pptx <- function(template_path) {
     pptx <- officer::read_pptx(template_path)
 
     # Remove all slides from the template
-    for (i in seq_len(length(pptx))) {
+    for (i in seq_along(pptx)) {
         pptx <- officer::remove_slide(pptx)
     }
 
