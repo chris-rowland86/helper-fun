@@ -77,7 +77,7 @@ pptx <- read_pptx("template.pptx")
 
 # Create plot and convert to rvg
 p <- ggplot(mtcars, aes(x = mpg, y = hp)) +
-  geom_point()
+    geom_point()
 rvg_plot <- convert_to_rvg(p)
 
 # Add to presentation

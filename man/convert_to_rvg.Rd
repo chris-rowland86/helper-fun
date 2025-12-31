@@ -29,7 +29,7 @@ can be edited directly in PowerPoint.
 library(ggplot2)
 
 p <- ggplot(mtcars, aes(x = mpg, y = hp)) +
-  geom_point()
+    geom_point()
 
 rvg_plot <- convert_to_rvg(p)
 }

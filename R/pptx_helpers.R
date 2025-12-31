@@ -256,7 +256,7 @@ init_pptx <- function(template_path = NULL) {
     # Use built-in template if no path provided
     if (is.null(template_path)) {
         template_path <- system.file(
-            "extdata", "tgtx_template.pptx",
+            "extdata", "template.pptx",
             package = "aaa.helper.fun",
             mustWork = TRUE
         )

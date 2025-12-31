@@ -4,21 +4,29 @@
 \alias{init_pptx}
 \title{Initialize Empty PowerPoint Presentation}
 \usage{
-init_pptx(template_path)
+init_pptx(template_path = NULL)
 }
 \arguments{
-\item{template_path}{Path to the PowerPoint template file}
+\item{template_path}{Path to a custom PowerPoint template file. If NULL
+(default), uses the package's built-in template located in
+\code{inst/extdata/template.pptx}.}
 }
 \value{
 An officer pptx object with all slides removed
 }
 \description{
 Reads a PowerPoint template and removes all existing slides to create
-a clean starting point for adding new slides programmatically.
+a clean starting point for adding new slides programmatically. By default,
+uses the package's built-in template, but a custom template path can be
+provided.
 }
 \examples{
 \dontrun{
-pptx <- init_pptx("path/to/template.pptx")
+# Use the built-in package template
+pptx <- init_pptx()
+
+# Or use a custom template
+pptx <- init_pptx("path/to/custom_template.pptx")
 }
 
 }
