@@ -1,4 +1,4 @@
-# helper.fun
+# aaa.helper.fun
 Functions that make my life easier
 =================================
 
@@ -6,7 +6,7 @@ Functions that make my life easier
 
 ```r
 # Install from local source
-devtools::install("packages/helper.fun")
+devtools::install("packages/aaa.helper.fun")
 ```
 
 ## Table of Contents
@@ -25,7 +25,7 @@ devtools::install("packages/helper.fun")
 ### Usage
 
 ```r
-library(helper.fun)
+library(aaa.helper.fun)
 library(ggplot2)
 
 # View all available TG corporate colors
