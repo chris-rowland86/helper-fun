@@ -4,12 +4,19 @@
 \alias{export_flextable_to_excel}
 \title{Export Flextable to Excel with Formatting}
 \usage{
-export_flextable_to_excel(table, file_path, overwrite = TRUE)
+export_flextable_to_excel(
+  table,
+  file_name,
+  output_folder = "output-files",
+  overwrite = TRUE
+)
 }
 \arguments{
 \item{table}{A flextable object to export}
 
-\item{file_path}{Full path for the output Excel file (including .xlsx extension)}
+\item{file_name}{A string specifying the file name (without .xlsx extension).}
+
+\item{output_folder}{A string specifying the output folder. Defaults to "output-files".}
 
 \item{overwrite}{Logical indicating whether to overwrite existing files.
 Defaults to TRUE}
@@ -34,7 +41,7 @@ tbl <- mtcars |>
   format_flextable()
 
 # Export to Excel
-export_flextable_to_excel(tbl, "output/summary_table.xlsx")
+export_flextable_to_excel(tbl, "summary_table")
 }
 
 }

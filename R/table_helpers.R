@@ -115,6 +115,7 @@ format_flextable <- function(x,
 #'
 #' @param table A flextable object to export
 #' @param file_name A string specifying the file name (without .xlsx extension).
+#' @param output_folder A string specifying the output folder. Defaults to "output-files".
 #' @param overwrite Logical indicating whether to overwrite existing files.
 #'   Defaults to TRUE
 #'
@@ -136,7 +137,12 @@ format_flextable <- function(x,
 #' }
 #'
 #' @export
-export_flextable_to_excel <- function(table, file_name, overwrite = TRUE) {
+export_flextable_to_excel <- function(
+  table,
+  file_name,
+  output_folder = "output-files",
+  overwrite = TRUE
+) {
     # Extract data from flextable
     data <- table$body$dataset
 
