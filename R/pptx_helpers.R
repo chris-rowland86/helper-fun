@@ -141,7 +141,7 @@ add_to_pptx <- function(pptx,
         value = officer::fpar(title, fp_t = fp_title)
     )
 
-    return(pptx)
+    return(invisible(pptx))
 }
 
 #' Add Title Slide to PowerPoint Presentation
@@ -225,7 +225,7 @@ add_title_slide <- function(pptx,
         location = officer::ph_location_type(type = "subTitle")
     )
 
-    return(pptx)
+    return(invisible(pptx))
 }
 
 #' Initialize Empty PowerPoint Presentation
@@ -269,5 +269,5 @@ init_pptx <- function(template_path = NULL) {
         pptx <- officer::remove_slide(pptx)
     }
 
-    return(pptx)
+    return(invisible(pptx))
 }
