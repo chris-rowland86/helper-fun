@@ -146,8 +146,8 @@ export_flextable_to_excel <- function(
             # Get Excel cell reference (offset by 1 for header row)
             cell_dims <- openxlsx2::wb_dims(row_idx + 1, col_idx)
 
-            # Apply fill color
-            openxlsx2::wb_add_fill(
+            # Apply fill color (must assign result back - openxlsx2 v1.22+ breaking change)
+            wb <- openxlsx2::wb_add_fill(
                 wb,
                 dims = cell_dims,
                 color = cell_color
